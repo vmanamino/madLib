@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    font-family: arial;
 }
 
 .images img {
@@ -8,4 +9,14 @@ body {
 
 .logo {
     padding-bottom: 85px;
+}
+
+.intro > h1 {
+    margin-right: 10%;
+}
+
+table {
+    width: 39%;
+    margin-left: 29%;
+    font-weight: bold;
 }
