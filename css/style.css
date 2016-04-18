@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+.images img {
+    border-style: solid;
+}
+
+.logo {
+    padding-bottom: 85px;
+}
