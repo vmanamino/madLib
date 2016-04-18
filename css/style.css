@@ -38,3 +38,7 @@ td {
     line-height: 225%;
     height: 160px;
 }
+
+#input {
+    text-decoration: underline;
+}
