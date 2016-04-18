@@ -20,3 +20,21 @@ table {
     margin-left: 29%;
     font-weight: bold;
 }
+
+td {
+    padding-top: 4%;
+    padding-botton: 4%;
+    /*align: left;*/
+}
+
+.text {
+    margin-top: 4%;
+}
+
+.text > p {
+    width: 35%;
+    margin-left: 32%;
+    text-align: left;
+    line-height: 225%;
+    height: 160px;
+}
