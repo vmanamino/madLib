@@ -17,7 +17,7 @@ angular.module("myApp", [])
             if ($scope.gender == 'male'){
                 return "he";
             }
-        }
+        };
         $scope.setInflected = function(){
             if ($scope.gender == 'female'){
                 return "her";
@@ -25,7 +25,7 @@ angular.module("myApp", [])
             if ($scope.gender == 'male'){
                 return "his";
             }
-        }
+        };
         $scope.setObject = function(){
             if ($scope.gender == 'female'){
                 return "her";
@@ -33,6 +33,6 @@ angular.module("myApp", [])
             if ($scope.gender == 'male'){
                 return "him";
             }
-        }
+        };
         
     })
