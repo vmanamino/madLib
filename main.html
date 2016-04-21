@@ -17,8 +17,8 @@
     <div class="these">
         <div class="intro">
             <h1>Provide words for the following:</h1>
-            <h2><a href="#" ng-click="gender='female'" ng-class="{active:gender=='female'}">Female</a></h2>
-            <h2><a href="#" ng-click="gender='male'" ng-class="{active:gender=='male'}">Male</a></h2>
+            <h2><a href="#" ng-click="setGender('female')" ng-class="{active:gender=='female'}">Female</a></h2>
+            <h2><a href="#" ng-click="setGender('male')" ng-class="{active:gender=='male'}">Male</a></h2>
         </div>
         <div class="words">
             <!--<h1>provide again</h1>-->
@@ -44,18 +44,26 @@
     <div class="text">
         <p><span id="input"><span ng-if="name === ''">{{  "{{ Name }\}" }}</span>{{name}}</span> 
         was a <span id="input"><span ng-if="job_title === ''">{{ "{{Job Title}\}" }}</span>{{job_title}}</span>
-        who loved technology. Although <span ng-if="gender === ''">{{ "{{ she/he }\}" }}</span>{{ setNominative() }} loved parts of <span ng-if="gender === ''">{{ "{{ her/his }\}" }}</span>{{ setInflected() }} job, <span ng-if="gender === ''">{{ "{{ she/he }\}" }}</span>{{ setNominative() }} absolutely hated
+        who loved technology. Although <span ng-if="nominative === ''">{{ "{{ she/he }\}" }}</span>{{ nominative }} 
+        loved parts of <span ng-if="inflected === ''">{{ "{{ her/his }\}" }}</span>{{ inflected }} job, 
+        <span ng-if="nominative === ''">{{ "{{ she/he }\}" }}</span>{{ nominative }} absolutely hated
         <span id="input"><span ng-if="tedious_task === ''">{{ "{{ Tedious Task }\}" }}</span>{{tedious_task}}</span>
         and <span id="input"><span ng-if="dirty_task === ''">{{ "{{ Dirty Task }\}" }}</span>{{dirty_task}}</span>. 
         So, <span id="input"><span ng-if="name === ''">{{ "{{ Name }\}" }}</span>{{name}}</span>
-        met with <span ng-if="gender === ''">{{ "{{ her/his }\}" }}</span>{{ setInflected() }} life mentor <span id="input"><span ng-if="celebrity === ''">{{ "{{ Celebrity }\}" }}</span>{{celebrity}}</span> 
-        who told <span ng-if="gender === ''">{{ "{{ her/his }\}" }}</span>{{ setObject() }} to learn how to <span id="input"><span ng-if="useless_skill === ''">{{ "{{ Useless Skill }\}" }}</span>{{useless_skill}}</span> 
-        with Thinkful. Thinkful didn't offer a course on <span id="input"><span ng-if="useless_skill === ''">{{ "{{ Useless Skill }\}" }}</span>{{useless_skill}}</span> 
-        so <span ng-if="gender === ''">{{ "{{ she/he }\}" }}</span>{{ setNominative() }} studied programming instead.</p> 
+        met with <span ng-if="inflected === ''">{{ "{{ her/his }\}" }}</span>{{ inflected }} 
+        life mentor <span id="input"><span ng-if="celebrity === ''">{{ "{{ Celebrity }\}" }}</span>{{celebrity}}</span> 
+        who told <span ng-if="object === ''">{{ "{{ her/him }\}" }}</span>{{ object }} 
+        to learn how to <span id="input"><span ng-if="useless_skill === ''">{{ "{{ Useless Skill }\}" }}</span>{{useless_skill}}</span> 
+        with Thinkful. Thinkful didn't offer a course on 
+        <span id="input"><span ng-if="useless_skill === ''">{{ "{{ Useless Skill }\}" }}</span>{{useless_skill}}</span> 
+        so <span ng-if="nominative === ''">{{ "{{ she/he }\}" }}</span>{{ nominative }} studied programming instead.</p> 
  
-        <p>What a great decision! With <span ng-if="gender === ''">{{ "{{ her/his }\}" }}</span>{{ setInflected() }} new skills, <span id="input"><span ng-if="name === ''">{{ "{{ Name }\}" }}</span>{{name}}</span> 
-        built a(n) <span id="input"><span ng-if="adjective === ''">{{ "{{ Adjective }\}" }}</span>{{adjective}}</span> robot named 
-        <span id="input"><span ng-if="obnoxious_celebrity === ''">{{ "{{ Obnoxious Celebrity }\}" }}</span>{{obnoxious_celebrity}}</span>
+        <p>What a great decision! With <span ng-if="inflected === ''">{{ "{{ her/his }\}" }}</span>{{ inflected }}
+        new skills, <span id="input"><span ng-if="name === ''">{{ "{{ Name }\}" }}</span>{{name}}</span> 
+        built a(n) <span id="input"><span ng-if="adjective === ''">{{ "{{ Adjective }\}" }}</span>
+        {{adjective}}</span> robot named 
+        <span id="input"><span ng-if="obnoxious_celebrity === ''">{{ "{{ Obnoxious Celebrity }\}" }}</span>
+        {{obnoxious_celebrity}}</span>
         that not only loved <span id="input"><span ng-if="dirty_task === ''">{{ "{{ Dirty Task }\}" }}</span>{{dirty_task}}</span> 
         but did it <span id="input"><span ng-if="huge_number === ''">{{ "{{ Huge Number }\}" }}</span>{{huge_number}}</span> faster.</p> 
     </div>

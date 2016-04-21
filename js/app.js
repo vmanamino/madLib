@@ -10,7 +10,22 @@ angular.module("myApp", [])
         $scope.obnoxious_celebrity = '';
         $scope.huge_number = '';
         $scope.gender = '';
-        $scope.pronounNominative = "nominative";
+        $scope.nominative = '';
+        $scope.inflected = '';
+        $scope.object = '';
+        $scope.setGender = function(gender) {
+            if (gender == 'female'){
+                $scope.nominative = "she";
+                $scope.inflected = 'her';
+                $scope.object = 'her'
+            }  
+            if (gender == 'male'){
+                $scope.nominative = 'he';
+                $scope.inflected = 'his';
+                $scope.object = 'him';
+            }
+            
+        };
         // $scope.setNominative = function(){
         //     if ($scope.gender == 'female'){
         //         // return "she"; // $scope.pronounNominative
