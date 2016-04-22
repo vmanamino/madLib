@@ -31,7 +31,7 @@ td {
     margin-top: 4%;
 }
 
-.text > p {
+.text p {
     width: 35%;
     margin-left: 32%;
     text-align: left;
@@ -45,4 +45,9 @@ td {
 
 .active {
   background-color: salmon;
+}
+
+#submit {
+    margin-top: 2%;
+    margin-left: 25%;
 }

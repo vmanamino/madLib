@@ -17,39 +17,54 @@ angular.module("myApp", [])
             if (gender == 'female'){
                 $scope.nominative = "she";
                 $scope.inflected = 'her';
-                $scope.object = 'her'
+                $scope.object = 'her';
+                $scope.gender = 'female';
             }  
             if (gender == 'male'){
                 $scope.nominative = 'he';
                 $scope.inflected = 'his';
                 $scope.object = 'him';
+                $scope.gender = 'male';
+                
             }
             
         };
-        // $scope.setNominative = function(){
-        //     if ($scope.gender == 'female'){
-        //         // return "she"; // $scope.pronounNominative
-        //         $scope.pronounNominative = "she";
-        //     }
-        //     if ($scope.gender == 'male'){
-        //         return "he";
-        //     }
-        // };
-        // $scope.setInflected = function(){
-        //     if ($scope.gender == 'female'){
-        //         return "her";
-        //     }
-        //     if ($scope.gender == 'male'){
-        //         return "his";
-        //     }
-        // };
-        // $scope.setObject = function(){
-        //     if ($scope.gender == 'female'){
-        //         return "her";
-        //     }
-        //     if ($scope.gender == 'male'){
-        //         return "him";
-        //     }
-        // };
-        
+        $scope.displayText = 'no';
+        $scope.displayForm = '';
+        $scope.displayErrors = 'no';
+        $scope.displayValidationError = 'no';
+        // $scope.huge_number_isNaN = '';
+        $scope.errors = 'You did not fill out: ';
+        $scope.submit = function(){
+            if ($scope.myForm.$error.required || !$scope.gender) {
+                $scope.displayErrors = '';
+            }
+            if (isNaN($scope.myForm.huge_number)){
+                $scope.displayValidationError = '';
+                
+            }
+            if (((!$scope.myForm.$error.required) && $scope.myForm.huge_number.$valid)  && $scope.gender) {
+                $scope.displayText = '';
+                $scope.displayErrors = 'no';
+                $scope.displayForm = 'no';
+                $scope.displayValidationError = 'no';
+            }
+        };
+        $scope.anew = function(){
+            $scope.displayText = 'no';
+            $scope.displayForm = '';
+            $scope.name = '';
+            $scope.job_title = '';
+            $scope.tedious_task = '';
+            $scope.dirty_task = '';
+            $scope.celebrity = '';
+            $scope.useless_skill = '';
+            $scope.adjective = '';
+            $scope.obnoxious_celebrity = '';
+            $scope.huge_number = '';
+            $scope.gender = '';
+            $scope.nominative = '';
+            $scope.inflected = '';
+            $scope.object = '';
+        };
     })
