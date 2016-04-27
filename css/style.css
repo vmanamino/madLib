@@ -29,7 +29,35 @@ td {
 
 .text {
     margin-top: 4%;
+    background-color: red;
 }
+
+.text.ng-hide-remove, .text.ng-hide-remove-active {
+    /*transition: all linear 0.5s;*/
+    display: block !important;
+    -webkit-animation-name: myChange;  
+    -webkit-animation-duration: 4s; 
+    animation-name: myChange;
+    animation-duration: 4s;
+}
+
+
+@-webkit-keyframes myChange {
+     0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+@keyframes myChange {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+
+}
+
+
 
 .text p {
     width: 35%;

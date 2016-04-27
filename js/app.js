@@ -1,4 +1,4 @@
-angular.module("myApp", [])
+angular.module("myApp", ['ngAnimate'])
     .controller("myCtrl", function($scope){
         $scope.name = '';
         $scope.job_title = '';
@@ -29,7 +29,7 @@ angular.module("myApp", [])
             }
             
         };
-        $scope.displayText = 'no';
+        $scope.displayText = '';
         $scope.displayForm = '';
         $scope.displayErrors = 'no';
         $scope.displayValidationError = 'no';
@@ -44,14 +44,14 @@ angular.module("myApp", [])
                 
             }
             if (((!$scope.myForm.$error.required) && $scope.myForm.huge_number.$valid)  && $scope.gender) {
-                $scope.displayText = '';
+                $scope.displayText = 'yes';
                 $scope.displayErrors = 'no';
                 $scope.displayForm = 'no';
                 $scope.displayValidationError = 'no';
             }
         };
         $scope.anew = function(){
-            $scope.displayText = 'no';
+            $scope.displayText = '';
             $scope.displayForm = '';
             $scope.name = '';
             $scope.job_title = '';
