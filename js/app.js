@@ -29,7 +29,7 @@ angular.module("myApp", ['ngAnimate'])
             }
             
         };
-        $scope.displayText = '';
+        $scope.displayText = false;
         $scope.displayForm = '';
         $scope.displayErrors = 'no';
         $scope.displayValidationError = 'no';
@@ -44,14 +44,14 @@ angular.module("myApp", ['ngAnimate'])
                 
             }
             if (((!$scope.myForm.$error.required) && $scope.myForm.huge_number.$valid)  && $scope.gender) {
-                $scope.displayText = 'yes';
+                $scope.displayText = true;
                 $scope.displayErrors = 'no';
                 $scope.displayForm = 'no';
                 $scope.displayValidationError = 'no';
             }
         };
         $scope.anew = function(){
-            $scope.displayText = '';
+            $scope.displayText = false;
             $scope.displayForm = '';
             $scope.name = '';
             $scope.job_title = '';

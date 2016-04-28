@@ -32,7 +32,7 @@ td {
     background-color: red;
 }
 
-.text.ng-hide-add,
+/*.text.ng-hide-add,*/
 .text.ng-hide-remove, .text.ng-hide-remove-active {
     /*transition: all linear 0.5s;*/
     display: block !important;
@@ -42,11 +42,11 @@ td {
     animation-duration: 4s;
 }
 
-.text.ng-hide-remove,
-.text.ng-hide-add, .text.ng-hide-add-active {
-    margin-top: 4%;
-    background-color: red;
-}
+/*.text.ng-hide-remove,*/
+/*.text.ng-hide-add, .text.ng-hide-add-active {*/
+/*    margin-top: 4%;*/
+/*    background-color: red;*/
+/*}*/
 
 
 
