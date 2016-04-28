@@ -30,7 +30,7 @@ angular.module("myApp", ['ngAnimate'])
             
         };
         $scope.displayText = false;
-        $scope.displayForm = '';
+        $scope.displayForm = true;
         $scope.displayErrors = 'no';
         $scope.displayValidationError = 'no';
         // $scope.huge_number_isNaN = '';
@@ -46,13 +46,13 @@ angular.module("myApp", ['ngAnimate'])
             if (((!$scope.myForm.$error.required) && $scope.myForm.huge_number.$valid)  && $scope.gender) {
                 $scope.displayText = true;
                 $scope.displayErrors = 'no';
-                $scope.displayForm = 'no';
+                $scope.displayForm = false;
                 $scope.displayValidationError = 'no';
             }
         };
         $scope.anew = function(){
             $scope.displayText = false;
-            $scope.displayForm = '';
+            $scope.displayForm = true;
             $scope.name = '';
             $scope.job_title = '';
             $scope.tedious_task = '';

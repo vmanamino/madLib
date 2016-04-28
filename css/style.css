@@ -29,12 +29,11 @@ td {
 
 .text {
     margin-top: 4%;
-    background-color: red;
 }
 
-/*.text.ng-hide-add,*/
 .text.ng-hide-remove, .text.ng-hide-remove-active {
     /*transition: all linear 0.5s;*/
+    transition: 0.4s all linear;
     display: block !important;
     -webkit-animation-name: myChange;  
     -webkit-animation-duration: 4s; 
@@ -42,29 +41,99 @@ td {
     animation-duration: 4s;
 }
 
-/*.text.ng-hide-remove,*/
-/*.text.ng-hide-add, .text.ng-hide-add-active {*/
-/*    margin-top: 4%;*/
-/*    background-color: red;*/
-/*}*/
+.text.ng-hide-add, .text.ng-hide-add-active {
+    transition: 0.4s all linear;
+    display: block !important;
+    -webkit-animation-name: myLeaving;  
+    -webkit-animation-duration: 3s; 
+    animation-name: myLeaving;
+    animation-duration: 3s;
+    
+}
 
-
+.these.ng-hide-remove.ng-hide-remove-active {
+    transition: 0.4s all linear;
+    display: block !important;
+    -webkit-animation-name: myForm;  
+    -webkit-animation-duration: 4s; 
+    animation-name: myForm;
+    animation-duration: 4s;
+}
 
 @-webkit-keyframes myChange {
-     0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    from {
+        background-color: indianred;
+        margin-left: -10%;
+    }
+    50% {
+        background-color: gray;
+    }
+    to {
+        background-color: white;
+        margin-left: 0;
+    }
 }
 
 @keyframes myChange {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-
+    from {
+        background-color: indianred;
+        margin-left: -10%;
+    }
+    50% {
+        background-color: gray;
+    }
+    to {
+        background-color: white;
+        margin-left: 0;
+    }
 }
 
+@-webkit-keyframes myLeaving {
+    from {
+        background-color: indianred;
+        margin-bottom: 0;
+    }
+    50% {
+        background-color: gray;
+    }
+    to {
+        background-color: white;
+        margin-bottom: -10%;
+    }
+}
+
+@keyframes myLeaving {
+    from {
+        background-color: indianred;
+        margin-bottom: 0;
+    }
+    50% {
+        background-color: gray;
+    }
+    to {
+        background-color: white;
+        margin-bottom: -10%;
+    }
+}
+
+@-webkit-keyframes myForm {
+    from {
+        margin-left: -20%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes myForm {
+    from {
+        margin-left: -20%;
+    }
+    to {
+       
+        margin-left: 0;
+    }
+}
 
 
 .text p {
@@ -87,3 +156,4 @@ td {
     margin-top: 2%;
     margin-left: 25%;
 }
+
